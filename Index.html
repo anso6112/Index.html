@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>콩콩 간호영어 단어장</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mascot" aria-hidden="true">🩺</div>
+    <h1>콩콩 간호영어 단어장</h1>
+    <p>간호대학생을 위한 필수 영단어</p>
+  </header>
+
+  <nav role="tablist">
+    <button class="on" data-t="list"><span class="ic">📖</span>단어장</button>
+    <button data-t="add"><span class="ic">✏️</span>단어 추가</button>
+    <button data-t="quiz"><span class="ic">🎯</span>퀴즈</button>
+  </nav>
+
+  <section id="list" class="panel on">
+    <div class="tools">
+      <input id="search" type="search" placeholder="영어 또는 한글로 검색" aria-label="단어 검색">
+      <select id="catF" aria-label="분류 선택"></select>
+    </div>
+    <p class="count" id="count"></p>
+    <div class="list" id="words"></div>
+  </section>
+
+  <section id="add" class="panel">
+    <div class="box">
+      <h2>새 단어 추가하기</h2>
+      <label for="aEn">영어 단어</label>
+      <input id="aEn" placeholder="예: hypertension" autocomplete="off">
+      <label for="aKo">한글 뜻</label>
+      <input id="aKo" placeholder="예: 고혈압" autocomplete="off">
+      <div class="row">
+        <div><label for="aCat">분류</label><select id="aCat"></select></div>
+      </div>
+      <label for="aNote">한글 설명 (선택)</label>
+      <textarea id="aNote" rows="3" placeholder="예: 혈압이 정상보다 지속적으로 높은 상태"></textarea>
+      <button class="btn" id="addBtn">단어장에 추가</button>
+      <div class="msg" id="addMsg" role="status"></div>
+    </div>
+  </section>
+
+  <section id="quiz" class="panel">
+    <div class="box" id="quizBox"></div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
